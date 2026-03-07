@@ -2,7 +2,7 @@
 
 # Remove Multiplayer Player Limit
 
-[**简体中文**](README_zh.md)
+[**简体中文**](README_ZH.md)
 
 ![Version](https://img.shields.io/badge/Version-0.0.4-blue.svg)
 ![Game](https://img.shields.io/badge/Slay_The_Spire_2-Mod-red.svg)
