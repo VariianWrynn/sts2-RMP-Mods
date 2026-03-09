@@ -64,7 +64,7 @@ func _initialize():
 	var output_file := "res://build/RemoveMultiplayerPlayerLimit.pck"
 	var manifest_path := "res://mod_manifest.json"
 	var project_dir := ProjectSettings.globalize_path("res://")
-	var external_asset_dir := project_dir.path_join("../RemoveMultiplayerPlayerLimit")
+	var external_asset_dir := project_dir.path_join("RemoveMultiplayerPlayerLimit")
 	DirAccess.make_dir_recursive_absolute(output_dir)
 	var packer := PCKPacker.new()
 	var ok := packer.pck_start(output_file)

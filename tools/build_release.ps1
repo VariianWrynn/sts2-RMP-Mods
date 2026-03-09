@@ -2,7 +2,7 @@ $ErrorActionPreference = "Stop"
 
 $root = Split-Path -Parent $PSScriptRoot
 $dotnet = "C:\Program Files\dotnet\dotnet.exe"
-$godot = Join-Path $root "libs\Godot_v4.5.1-stable_win64_console.exe"
+$godot = "F:\Dev\Remove Multiplayer PlayerLimit\Godot 4.5.1\Godot_v4.5.1-stable_win64_console.exe"
 $buildRoot = Join-Path $root "build"
 $releaseDir = Join-Path $root "build\RemoveMultiplayerPlayerLimit"
 $dllSource = Join-Path $root ".godot\mono\temp\bin\Debug\RemoveMultiplayerPlayerLimit.dll"
