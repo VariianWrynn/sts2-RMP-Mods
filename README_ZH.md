@@ -6,7 +6,7 @@
 
 ![Version](https://img.shields.io/badge/Version-0.0.4A-blue.svg)
 ![Game](https://img.shields.io/badge/Slay_The_Spire_2-Mod-red.svg)
-![Platform](https://img.shields.io/badge/Platform-Windows%20|%20Godot-lightgrey.svg)
+![Platform](https://img.shields.io/badge/Platform-Windows%20|%20macOS-lightgrey.svg)
 
 *一款《杀戮尖塔2》的联机人数上限解锁模组。打破原版 4 人的限制，喊上更多的好友一起爬塔吧！*
 
@@ -38,9 +38,38 @@
 
 ## 🎮 玩家安装说明
 
+### Windows
+
 1. 从 **Releases** 页面下载最新的 `sts2-RMP-[version].zip` 压缩包。
 2. 解压并将内部的 `RemoveMultiplayerPlayerLimit` 文件夹整体复制到游戏的 `<Slay the Spire 2>/mods/` 目录下。
-3. 启动游戏并在 **Mods** 菜单中勾选启用本模组。
+3. 启动游戏，模组将自动启用。
+
+### macOS (Apple Silicon)
+
+macOS 需要将模组放入 `.app` 包内部，并通过 Rosetta 2 运行游戏。
+
+> **注意：** 尚未进行联机实测，仅能保证正确打开游戏并且右下角显示正常载入模组。
+
+1. 从 **Releases** 页面下载最新的 `sts2-RMP-[version].zip` 压缩包。
+2. 解压并将内部的 `RemoveMultiplayerPlayerLimit` 文件夹复制到：
+   ```
+   <Slay the Spire 2>/SlayTheSpire2.app/Contents/MacOS/mods/
+   ```
+3. 以下两种启动方式都绕过了 Steam 的正常启动流程。为避免出现 **"Steam failed to initialize"** 错误，请确保 **Steam 客户端正在后台运行**，并在游戏可执行文件旁创建 `steam_appid.txt` 文件：
+   ```bash
+   echo "2868840" > "$HOME/Library/Application Support/Steam/steamapps/common/Slay the Spire 2/SlayTheSpire2.app/Contents/MacOS/steam_appid.txt"
+   ```
+4. 通过 Rosetta 2 运行游戏，任选**其一**：
+
+   **方式 A — 访达（推荐）：** 找到 `SlayTheSpire2.app`，右键 > **显示简介**，勾选 **"以 Rosetta 方式打开"**，然后直接双击 `SlayTheSpire2.app` 启动（**不要**通过 Steam 启动，Steam 可能会忽略 Rosetta 设置）。
+
+   **方式 B — 终端：** 打开"终端"应用，输入以下命令：
+   ```bash
+   cd "$HOME/Library/Application Support/Steam/steamapps/common/Slay the Spire 2/SlayTheSpire2.app/Contents/MacOS"
+   arch -x86_64 "./Slay the Spire 2"
+   ```
+
+5. 启动游戏，模组将自动启用。
 
 ## ⚙️ 配置文件说明
 

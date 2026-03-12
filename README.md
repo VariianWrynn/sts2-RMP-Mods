@@ -6,7 +6,7 @@
 
 ![Version](https://img.shields.io/badge/Version-0.0.4A-blue.svg)
 ![Game](https://img.shields.io/badge/Slay_The_Spire_2-Mod-red.svg)
-![Platform](https://img.shields.io/badge/Platform-Windows%20|%20Godot-lightgrey.svg)
+![Platform](https://img.shields.io/badge/Platform-Windows%20|%20macOS-lightgrey.svg)
 
 *A Slay the Spire 2 mod that increases the vanilla 4-player multiplayer lobby limit. Gather more friends and climb the Spire together!*
 
@@ -38,9 +38,38 @@ This mod elegantly increases the multiplayer lobby limit. By default, it perfect
 
 ## 🎮 Installation
 
+### Windows
+
 1. Download the latest `sts2-RMP-[version].zip` from the **Releases** page.
 2. Extract the archive and copy the inner `RemoveMultiplayerPlayerLimit` folder to your game directory: `<Slay the Spire 2>/mods/`.
-3. Launch the game and enable the mod in the **Mods** menu.
+3. Launch the game. The mod will be enabled automatically.
+
+### macOS (Apple Silicon)
+
+macOS requires placing the mod inside the `.app` bundle and running the game under Rosetta 2.
+
+> **Note:** Online multiplayer has not been tested on macOS. The mod is only confirmed to launch correctly and show as loaded in the bottom-right corner.
+
+1. Download the latest `sts2-RMP-[version].zip` from the **Releases** page.
+2. Extract the archive and copy the inner `RemoveMultiplayerPlayerLimit` folder to:
+   ```
+   <Slay the Spire 2>/SlayTheSpire2.app/Contents/MacOS/mods/
+   ```
+3. Both launch methods below bypass Steam's normal launch flow. To avoid a **"Steam failed to initialize"** error, make sure the **Steam client is running** in the background and create a `steam_appid.txt` file next to the game executable:
+   ```bash
+   echo "2868840" > "$HOME/Library/Application Support/Steam/steamapps/common/Slay the Spire 2/SlayTheSpire2.app/Contents/MacOS/steam_appid.txt"
+   ```
+4. Run the game under Rosetta 2 using **one** of these methods:
+
+   **Option A — Finder (recommended):** Navigate to `SlayTheSpire2.app`, right-click > **Get Info**, and check **"Open using Rosetta"**. Then double-click `SlayTheSpire2.app` directly to launch (do **not** launch through Steam, as it may override the Rosetta setting).
+
+   **Option B — Terminal:** Open Terminal and run:
+   ```bash
+   cd "$HOME/Library/Application Support/Steam/steamapps/common/Slay the Spire 2/SlayTheSpire2.app/Contents/MacOS"
+   arch -x86_64 "./Slay the Spire 2"
+   ```
+
+5. The mod will be enabled automatically on launch.
 
 ## ⚙️ Configuration
 
