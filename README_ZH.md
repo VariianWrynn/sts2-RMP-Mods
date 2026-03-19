@@ -4,7 +4,7 @@
 
 [**English**](README.md) | [**更改日志**](Changelog.md)
 
-![Version](https://img.shields.io/badge/Version-0.0.4A-blue.svg)
+![Version](https://img.shields.io/badge/Version-0.0.5A-blue.svg)
 ![Game](https://img.shields.io/badge/Slay_The_Spire_2-Mod-red.svg)
 ![Platform](https://img.shields.io/badge/Platform-Windows%20|%20macOS%20|%20Linux-lightgrey.svg)
 
